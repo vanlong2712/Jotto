@@ -1,5 +1,8 @@
-import React from 'react'
+import {actionTypes, correctGuess} from "./";
 
-test('renders without crashing', () => {
-
+describe('correctGuess', () => {
+    test('returns an action with type `CORRECT_GUESS`', () => {
+    const action = correctGuess() ;
+    expect(action).toEqual({ type: actionTypes.CORRECT_GUESS });
+    });
 });
